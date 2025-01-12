@@ -53,7 +53,7 @@ function appendLog(message, target = logDisplay) {
 
 function showAppSection() {
     const users = JSON.parse(localStorage.getItem('users') || '{}');
-    const username = Object.keys(users).find(name => users[name].id === currentUserId) || 'BLUExDEMON TECH 🌹';
+    const username = Object.keys(users).find(name => users[name].id === currentUserId) || '‍‍𝄞∘̥⃟𝐄𝐌𝐌𝐘_𝐇𝐄𝐍𝐙-𝐓𝐄𝐂𝐇_—͟͟͞͞𖣘';
     
     authSection.classList.add('hidden');
     loginInterface.classList.add('hidden');
@@ -69,7 +69,7 @@ function showAppSection() {
     logDisplay.parentNode.insertBefore(usernameDisplay, logDisplay);
     
     // Display BLUE ID message and user's UID
-    appendLog("This is your ID👇");
+    appendLog("HENZ AI GENERATED YOUR ID👇");
     appendLog(`${currentUserId}`);
     
     setTimeout(() => {
@@ -98,7 +98,7 @@ function checkExistingSession() {
     
     if (currentUserId) {
         showAppSection();
-        appendLog(`Welcome back!😊😊`);
+        appendLog(`💠HEY BUDDY WELCOME💠`);
     } else {
         authSection.classList.remove('hidden');
         loginInterface.classList.add('hidden');
@@ -315,7 +315,7 @@ socket.on('registerResponse', (response) => {
         currentUserId = response.userId;
         localStorage.setItem('currentUserId', currentUserId);
         localStorage.setItem('isAdmin', 'false');
-        appendLog(`Registered successfully. Your user BLUE ID is: ${currentUserId}`, loginInterface);
+        appendLog(`Registered successfully. Your user HENZ ID is: ${currentUserId}`, loginInterface);
         showAppSection();
     } else {
         appendLog(`Registration failed: ${response.message}`, loginInterface);
